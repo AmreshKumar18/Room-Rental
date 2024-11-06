@@ -12,7 +12,7 @@ export const UserContextProvider = ({ children }) => {
 
   async function loginUser(email, password) {
     await axios
-      .post("http://localhost:4000/api/loginuser", { email, password })
+      .post("https://room-rental-backend-ece1.onrender.com/api/loginuser", { email, password })
       .then(({ data }) => {
         sessionStorage.setItem("user", JSON.stringify(data)); // Store the complete `data` object
         console.log("User data stored:", data); // Log user data
@@ -62,7 +62,7 @@ export const UserContextProvider = ({ children }) => {
         question,
       };
       const res = await axios.post(
-        "http://localhost:4000/api/userregister",
+        "https://room-rental-backend-ece1.onrender.com/api/userregister",
         userDetails
       );
       if (res.data) {
@@ -113,7 +113,7 @@ export const UserContextProvider = ({ children }) => {
       }
 
       const res = await axios.post(
-        "http://localhost:4000/api/addroom",
+        "https://room-rental-backend-ece1.onrender.com/api/addroom",
         formData,
         {
           headers: { token: userToken, "Content-Type": "multipart/form-data" },

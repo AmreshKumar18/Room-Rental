@@ -43,7 +43,7 @@ const Card = ({ item, userLocation }) => {
     <>
       <div className="home_card">
         <div className="home_img">
-          <img src={`http://localhost:4000/${item.image}`} alt="" />
+          <img src={`https://room-rental-backend-ece1.onrender.com/${item.image}`} alt="" />
         </div>
 
         <div className="home_details">

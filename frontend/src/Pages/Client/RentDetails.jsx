@@ -40,7 +40,7 @@ const RentDetails = () => {
   const roomDetails = async (req, res) => {
     try {
       const res = await axios.get(
-        `http://localhost:4000/api/roomdetails/${id}`
+        `https://room-rental-backend-ece1.onrender.com/api/roomdetails/${id}`
       );
       // console.log(res.data.roomDetails);
       setRoomData(res.data.roomDetails);
@@ -53,7 +53,7 @@ const RentDetails = () => {
   const reviews = async (req, res) => {
     try {
       const res = await axios.get(
-        `http://localhost:4000/api/all-reviews/${id}`
+        `https://room-rental-backend-ece1.onrender.com/api/all-reviews/${id}`
       );
       setReview(res.data.allReviews.reviews);
     } catch (error) {
@@ -76,7 +76,7 @@ const RentDetails = () => {
     // await feedback(data.rating, data.comment);
 
     await axios
-      .post(`http://localhost:4000/api/add-review/${id}`, feedback, {
+      .post(`https://room-rental-backend-ece1.onrender.com/api/add-review/${id}`, feedback, {
         headers: { token: user.token },
       })
       .then(({ data }) => {
@@ -142,7 +142,7 @@ const RentDetails = () => {
       <section className="section">
         <div className="mt-24">
           <div className="details-img">
-            <img src={`http://localhost:4000/${roomData.image}`} alt="" />
+            <img src={`https://room-rental-backend-ece1.onrender.com/${roomData.image}`} alt="" />
           </div>
           <div className="details-room">
             <p> &#8377; {roomData.price}</p>

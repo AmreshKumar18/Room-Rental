@@ -44,7 +44,7 @@ const Rent = () => {
 
   const allRentRooms = async (req, res) => {
     try {
-      const res = await axios.get("http://localhost:4000/api/allRoom");
+      const res = await axios.get("https://room-rental-backend-ece1.onrender.com/api/allRoom");
       setRoom(res.data.getAllRoom);
       // console.log(res.data.getAllRoom);
     } catch (error) {

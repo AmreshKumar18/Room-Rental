@@ -23,7 +23,7 @@ const Contact = () => {
       description: data.description,
     };
     await axios
-      .post("http://localhost:4000/api/contact-details", contactDetails, {
+      .post("https://room-rental-backend-ece1.onrender.com/api/contact-details", contactDetails, {
         headers: { token: user.token },
       })
       .then((res) => {

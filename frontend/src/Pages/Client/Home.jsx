@@ -21,7 +21,7 @@ const Home = () => {
   const popularRent = async (req, res) => {
     try {
       const { data } = await axios.get(
-        "http://localhost:4000/api/popular-items"
+        "https://room-rental-backend-ece1.onrender.com/api/popular-items"
       );
       const pop_items = data.popularItems.filter(
         (item) => item.popular === true
